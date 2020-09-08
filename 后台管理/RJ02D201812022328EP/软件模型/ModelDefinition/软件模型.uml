@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="cc7b3389-0b60-4126-91d4-da7f806bf50e"
+  name="软件模型" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="55189136-54d0-4e5c-83b9-8dcde0d43ba7">
+      <body>判断是否有用户</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="b363d28f-7a89-410e-b6eb-94a561ae2404"
+          LastKnownName="Decision2"
+          LastKnownLocation="软件模型.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="cab6e8e2-a10d-4c86-9130-de254781f2ef">
+      <body>判断注册信息及两次密码</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="fffad4fd-de10-4957-bbe9-3c800134df2c"
+          LastKnownName="Decision1"
+          LastKnownLocation="软件模型.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="2ff38830-2fb7-4fad-95c0-c2e0fcdf1afb">
+      <body>ADO.NET</body>
+    </comment>
+    <comment
+      Id="a62a6213-1c44-4f3a-b4f9-d6f653156cb9">
+      <body>**编码处理**</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="9d1f9d13-32fa-49a4-b003-423de830acbb"
+          LastKnownName="根据输入的账号查用户"
+          LastKnownLocation="软件模型.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="21b2f04e-995a-4c3c-a6e0-85b0eab521cb"
+        name="注册过程"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="4e9424bd-ca99-430d-9d36-29ee9a679c50"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3633e609-8002-4358-a134-c5ccd210dabc"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="61b3caf0-29c7-4daf-82cc-aa7c817b18ef"
+                  LastKnownName="输入注册信息"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="61b3caf0-29c7-4daf-82cc-aa7c817b18ef"
+            name="输入注册信息"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ea41e6b3-9afa-4f35-83ff-201d8c004c13"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="fffad4fd-de10-4957-bbe9-3c800134df2c"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="fffad4fd-de10-4957-bbe9-3c800134df2c"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7c780b1e-6db9-4a49-84be-e87700deb791"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="41e38171-aa0e-4b56-9c0b-2e7736c2f3c7"
+                  LastKnownName="提示不能为空/两次密码需相同"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="37b53cf7-a56c-4149-b9dc-3568e282c935"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9d1f9d13-32fa-49a4-b003-423de830acbb"
+                  LastKnownName="根据输入的账号查用户"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="41e38171-aa0e-4b56-9c0b-2e7736c2f3c7"
+            name="提示不能为空/两次密码需相同"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4c6e7c01-927a-4a6c-ac56-ecbf55f97740"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="61b3caf0-29c7-4daf-82cc-aa7c817b18ef"
+                  LastKnownName="输入注册信息"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="13f1a343-c71c-4691-ac0d-fba224c9c372"
+            name="&#xD;&#xA;声明一个SqlCommand对象&#xD;&#xA;设置SqlCommand对象的Connection为SqlConnection对象&#xD;&#xA;设置SqlCommand对象的CommandText属性（SQL语句）&#xD;&#xA;&#xD;&#xA;根据SQL语句的不同性质，调用相应的Execute***方法"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0624c035-c5d4-4c62-a6f8-4ec1d0303936"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="87cac0e7-6add-44ec-a6a2-b98fc205dd15"
+                  LastKnownName="声明一个SqlConnection对象&#xD;&#xA;设置SqlConnection对象的ConnectionString属性&#xD;&#xA;调用SqlConnection对象的Open方法，打开数据库连接"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="cdfe9fd6-cde5-4068-84c3-d55766a2d0cc"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0149f0d1-d0e3-4e1f-84d4-778457651955"
+                  LastKnownName="数据库：SQLServer&#xD;&#xA;将T-SQL语句执行的结果返回"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="87cac0e7-6add-44ec-a6a2-b98fc205dd15"
+            name="声明一个SqlConnection对象&#xD;&#xA;设置SqlConnection对象的ConnectionString属性&#xD;&#xA;调用SqlConnection对象的Open方法，打开数据库连接"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="762713f8-4edc-42cf-b33e-a60044656715"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="998b9eca-f0fc-4d2f-ba39-198a9a2effed"
+                  LastKnownName="软件界面：输入或显示"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="56eac7ec-69dc-4d30-8667-0a637044221f"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="13f1a343-c71c-4691-ac0d-fba224c9c372"
+                  LastKnownName="&#xD;&#xA;声明一个SqlCommand对象&#xD;&#xA;设置SqlCommand对象的Connection为SqlConnection对象&#xD;&#xA;设置SqlCommand对象的CommandText属性（SQL语句）&#xD;&#xA;&#xD;&#xA;根据SQL语句的不同性质，调用相应的Execute***方法"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d6d8ad62-da8f-44cf-85c9-1f6094df1b59"
+            name="            string Sqlstr = &quot;server=(local);database=Palm_SC_Electric;uid=sa;pwd=123&quot;;&#xD;&#xA;            SqlConnection conn = new SqlConnection(Sqlstr);&#xD;&#xA;            conn.Open();&#xD;&#xA;            string sqlText = &quot;insert into 账号表(登陆账号,密码,身份证号) values(@Account,@password,@id)&quot;;&#xD;&#xA;            SqlParameter[] sp = new SqlParameter[]&#xD;&#xA;            {&#xD;&#xA;                new SqlParameter(&quot;@Account&quot;,txtAccount.Text),&#xD;&#xA;                new SqlParameter(&quot;@password&quot;,txtPassword.Text),&#xD;&#xA;                new SqlParameter(&quot;@id&quot;,txtId.Text)&#xD;&#xA;            };&#xD;&#xA;            SqlCommand sqlCmd = new SqlCommand(sqlText,conn);&#xD;&#xA;            if (sp != null)&#xD;&#xA;                sqlCmd.Parameters.AddRange(sp);/////&#xD;&#xA;            if (sqlCmd.ExecuteNonQuery() != 0)&#xD;&#xA;                MessageBox.Show(&quot;chengong&quot;);&#xD;&#xA;            conn.Close();"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ca5b93b9-4a51-487e-a99f-050a56cd71ec"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="5af5d4ae-d692-4eed-ad7f-7b5a67025912"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="b363d28f-7a89-410e-b6eb-94a561ae2404"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4a97837f-e792-42fa-932a-170f95d651cb"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d6d8ad62-da8f-44cf-85c9-1f6094df1b59"
+                  LastKnownName="            string Sqlstr = &quot;server=(local);database=Palm_SC_Electric;uid=sa;pwd=123&quot;;&#xD;&#xA;            SqlConnection conn = new SqlConnection(Sqlstr);&#xD;&#xA;            conn.Open();&#xD;&#xA;            string sqlText = &quot;insert into 账号表(登陆账号,密码,身份证号) values(@Account,@password,@id)&quot;;&#xD;&#xA;            SqlParameter[] sp = new SqlParameter[]&#xD;&#xA;            {&#xD;&#xA;                new SqlParameter(&quot;@Account&quot;,txtAccount.Text),&#xD;&#xA;                new SqlParameter(&quot;@password&quot;,txtPassword.Text),&#xD;&#xA;                new SqlParameter(&quot;@id&quot;,txtId.Text)&#xD;&#xA;            };&#xD;&#xA;            SqlCommand sqlCmd = new SqlCommand(sqlText,conn);&#xD;&#xA;            if (sp != null)&#xD;&#xA;                sqlCmd.Parameters.AddRange(sp);/////&#xD;&#xA;            if (sqlCmd.ExecuteNonQuery() != 0)&#xD;&#xA;                MessageBox.Show(&quot;chengong&quot;);&#xD;&#xA;            conn.Close();"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="4d26b80d-94ab-4eeb-b99c-ceb1e79faee3"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7c19b07d-227e-4600-a98b-89e84bd08e28"
+                  LastKnownName="提示用户存在"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="7c19b07d-227e-4600-a98b-89e84bd08e28"
+            name="提示用户存在"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c4791a1e-98d0-489a-8168-0519cc45b89a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="61b3caf0-29c7-4daf-82cc-aa7c817b18ef"
+                  LastKnownName="输入注册信息"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="9d1f9d13-32fa-49a4-b003-423de830acbb"
+            name="根据输入的账号查用户"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f2da7cd9-8f18-48fb-a278-32baa202d66d"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="b363d28f-7a89-410e-b6eb-94a561ae2404"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="5af5d4ae-d692-4eed-ad7f-7b5a67025912"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="0149f0d1-d0e3-4e1f-84d4-778457651955"
+            name="数据库：SQLServer&#xD;&#xA;将T-SQL语句执行的结果返回"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5866dfdc-ad77-4d76-a583-63369acd8400"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="13f1a343-c71c-4691-ac0d-fba224c9c372"
+                  LastKnownName="&#xD;&#xA;声明一个SqlCommand对象&#xD;&#xA;设置SqlCommand对象的Connection为SqlConnection对象&#xD;&#xA;设置SqlCommand对象的CommandText属性（SQL语句）&#xD;&#xA;&#xD;&#xA;根据SQL语句的不同性质，调用相应的Execute***方法"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="998b9eca-f0fc-4d2f-ba39-198a9a2effed"
+            name="软件界面：输入或显示"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3a0c375e-855b-463e-9258-dbb72abfa537"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="87cac0e7-6add-44ec-a6a2-b98fc205dd15"
+                  LastKnownName="声明一个SqlConnection对象&#xD;&#xA;设置SqlConnection对象的ConnectionString属性&#xD;&#xA;调用SqlConnection对象的Open方法，打开数据库连接"
+                  LastKnownLocation="软件模型.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

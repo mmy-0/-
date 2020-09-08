@@ -1,0 +1,9 @@
+F:\NET\后台管理\666\bin\Debug\666.exe.config
+F:\NET\后台管理\666\bin\Debug\666.exe
+F:\NET\后台管理\666\bin\Debug\666.pdb
+F:\NET\后台管理\666\obj\Debug\666.csprojAssemblyReference.cache
+F:\NET\后台管理\666\obj\Debug\_666.frmAllUser.resources
+F:\NET\后台管理\666\obj\Debug\_666.Properties.Resources.resources
+F:\NET\后台管理\666\obj\Debug\666.csproj.GenerateResource.cache
+F:\NET\后台管理\666\obj\Debug\666.exe
+F:\NET\后台管理\666\obj\Debug\666.pdb

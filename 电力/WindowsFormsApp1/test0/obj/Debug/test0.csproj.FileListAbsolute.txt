@@ -1,0 +1,9 @@
+F:\NET\电力\WindowsFormsApp1\test0\bin\Debug\test0.exe.config
+F:\NET\电力\WindowsFormsApp1\test0\bin\Debug\test0.exe
+F:\NET\电力\WindowsFormsApp1\test0\bin\Debug\test0.pdb
+F:\NET\电力\WindowsFormsApp1\test0\obj\Debug\test0.csprojAssemblyReference.cache
+F:\NET\电力\WindowsFormsApp1\test0\obj\Debug\test0.Form1.resources
+F:\NET\电力\WindowsFormsApp1\test0\obj\Debug\test0.Properties.Resources.resources
+F:\NET\电力\WindowsFormsApp1\test0\obj\Debug\test0.csproj.GenerateResource.cache
+F:\NET\电力\WindowsFormsApp1\test0\obj\Debug\test0.exe
+F:\NET\电力\WindowsFormsApp1\test0\obj\Debug\test0.pdb
